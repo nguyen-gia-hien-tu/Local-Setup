@@ -1,7 +1,9 @@
 # Installing ZSH, Oh-My-ZSH and Powerlevel10k 
-## This documentation goes through the installation process of different tools
+## This documentation goes through the installation process of different tools for ZSH
 
-### ZSH
+<br>
+
+## ZSH
 To install ZSH, follow [Install and Set Up ZSH As
 Default](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default)
 or follow the following commands (for Ubuntu):
@@ -25,7 +27,6 @@ chsh -s $(which zsh)
 ## Oh-My-ZSH
 Install [oh-my-zsh](https://ohmyz.sh) following [Install oh-my-zsh
 now](https://ohmyz.sh/#install) or the following command
-
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -33,13 +34,14 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 <br>
 
 ## Powerlevel10k
-1. Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k) following
-[this](https://github.com/romkatv/powerlevel10k#oh-my-zsh) or the following
-command
+Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k) following
+[this](https://github.com/romkatv/powerlevel10k#oh-my-zsh) or follow these
+steps:
 
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
+1. Clone the repo:
+    ```bash
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
 
 2. In the `~/.zshrc` file set `ZSH_THEME="powerlevel10k/powerlevel10k"`
 
@@ -52,10 +54,38 @@ ZSH](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-
 or follow these steps:
 
   1. Run the following command
+      ```bash
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      ```
 
-  ```bash
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  ```
+  2. Add the plugin `zsh-autosuggestions` to the list of plugins for Oh My Zsh
+     to load (inside `~/.zshrc`)
+      ```bash
+      plugins=( 
+        # other plugins...
+        zsh-autosuggestions
+      )
+      ```
+     
+<br>
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside
-     `~/.zshrc`)
+## ZSH Syntax Highlighting
+Install
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+following [Installation for Oh My
+ZSH](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+or follow these steps:
+
+  1. Run the following command
+      ```bash
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      ```
+
+  2. Add the plugin `zsh-syntax-highlighting` to the list of plugins for Oh My
+     Zsh to load (inside `~/.zshrc`)
+      ```bash
+      plugins=( 
+        # other plugins...
+        zsh-syntax-highlighting
+      )
+      ```
