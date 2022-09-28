@@ -35,15 +35,32 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 ## Powerlevel10k
 Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k) following
-[this](https://github.com/romkatv/powerlevel10k#oh-my-zsh) or follow these
-steps:
+[Installation for Oh My ZSH](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+and [MesloLGS Nerd Font for
+Powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+or follow these steps:
 
-1. Clone the repo:
-    ```bash
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    ```
+  1. Clone the repo:
+      ```bash
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+      ```
 
-2. In the `~/.zshrc` file set `ZSH_THEME="powerlevel10k/powerlevel10k"`
+  2. In the `~/.zshrc` file set `ZSH_THEME="powerlevel10k/powerlevel10k"`
+
+  3. Download and install these four ttf files:
+      * [MesloLGS NF Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+      * [MesloLGS NF Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+      * [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+      * [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+  4. If you use VSCode as your text editor, configure `MesloLGS NF` as one of
+     VSCode's fonts:
+
+      1. Open Command Palette using `Ctrl + Shift + p` or `Cmd + Shift + p` for
+         Mac
+      2. Search with the word "Font" then check for the section "Editor: Font
+         Family"
+      3. Add `MesloLGS NF` to the existing list of fonts
 
 <br>
 
@@ -89,3 +106,4 @@ or follow these steps:
         zsh-syntax-highlighting
       )
       ```
+
