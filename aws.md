@@ -22,5 +22,7 @@ To delete all untagged image in an AWS ECR repository, do the following:
 ```zsh
 # This requires jq installed
 # Use `sudo apt install jq` to install it
-aws ecr describe-images --repository-name oneai-dda-liveops-deployment_test/custom_workbench --filter tagStatus=UNTAGGED | jq ".imageDetails[].imageDigest" | xargs -I {} aws ecr batch-delete-image --repository-name oneai-dda-liveops-deployment_test/custom_workbench --image-ids imageDigest={}
+aws ecr describe-images --repository-name oneai-dda-liveops-deployment_test/custom_workbench --filter tagStatus=UNTAGGED |\
+jq ".imageDetails[].imageDigest" |\
+xargs -I {} aws ecr batch-delete-image --repository-name oneai-dda-liveops-deployment_test/custom_workbench --image-ids imageDigest={}
 ```
