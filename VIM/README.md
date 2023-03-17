@@ -18,8 +18,9 @@ This document goes through my local setup for VIM for a simple and quick editing
     ~/.fzf/install
     ```
 
-  * The `rg` ([ripgrep](https://github.com/BurntSushi/ripgrep)) tool for search files and patterns. To install, run
+  * The `ag` ([the_silver_searcher](https://github.com/ggreer/the_silver_searcher)) tool for search files and patterns. To install, run
 
     ```zsh
-    sudo apt install ripgrep
+    sudo apt install silversearcher-ag
     ```
+
