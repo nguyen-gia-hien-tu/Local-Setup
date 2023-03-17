@@ -12,8 +12,8 @@ This document goes through my local setup for VIM for a simple and quick editing
 * The `.vimrc` file contains some tools that require manual installation
 	* The `fzf` tools for [fuzzy search](https://github.com/junegunn/fzf). To install, run
 		```zsh
-			git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-			~/.fzf/install
+		git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+		~/.fzf/install
 		```
 	* The `rg` ([ripgrep](https://github.com/BurntSushi/ripgrep)) tool for search files and patterns. To install, run 
 		```zsh
