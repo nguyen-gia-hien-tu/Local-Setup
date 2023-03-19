@@ -80,10 +80,10 @@ set mouse+=a
 " inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Key map for switching between Vim panels
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Set tab space to 2
 set tabstop=2
@@ -104,6 +104,18 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Git for Vim
+Plug 'tpope/vim-fugitive'
+" Auto-completion for Python in VIM
+Plug 'davidhalter/jedi-vim'
+" Code Completion Engine for Multiple Languages for VIM
+" The below 'Plug' is only for getting the latest update from the repo
+" To use it, this requires some manual installation, run the below commands on Ubuntu
+" sudo apt install build-essential cmake vim-nox python3-dev
+" sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
+" cd ~/.vim/plugged/YouCompleteMe
+Plug 'ycm-core/YouCompleteMe'
+" python3 install.py --all
 call plug#end()
 
 " Use Gruvbox theme
@@ -113,12 +125,17 @@ let g:gruvbox_contrast_dark = 'hard'
 set bg=dark
 
 " Set FZF Default Command and Options
+" This default FZF command requires `ag` tool to be installed
 let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -g ""'
-let $FZF_DEFAULT_OPTS="--preview-window 'right:55%' --preview 'bat --style=numbers --line-range :300 {}'
+" This default FZFG option requires `bat` tool to be installed
+let $FZF_DEFAULT_OPTS="--preview-window 'right:55%' --preview 'bat --style=numbers --line-range=:300 {}'
                         \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
                         \ctrl-b:preview-page-up,ctrl-f:preview-page-down,
                         \ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
                         \alt-up:half-page-up,alt-down:half-page-down"
+
+" Set Airline theme
+let g:airline_theme='gruvbox'
 
 " For airline Powerline Fonts
 let g:airline_powerline_fonts = 1
@@ -127,7 +144,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" unicode symbols
+" Unicode Symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
