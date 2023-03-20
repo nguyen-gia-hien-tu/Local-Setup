@@ -108,3 +108,6 @@ This document goes through my local setup for VIM for a simple and quick editing
         python3 install.py --all
         ```
 
+* For fonts used for Vim, I used [Meslo LG S Nerd
+  Font Regular](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete).
+  Since I'm using Windows (WSL), I install [Meslo LG S Regular Nerd Font Complete Windows Compatible.ttf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete/Meslo%20LG%20S%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf)
