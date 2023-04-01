@@ -20,6 +20,8 @@ This document goes through my local setup for VIM for a simple and quick editing
     Vim](https://github.com/preservim/nerdtree)) is used for viewing files in a
     tree view, convenient for viewing the structure of a directory
 
+  * The `VimDevIcons` ([Add Icons to Your Plugins](https://github.com/ryanoasis/vim-devicons)) is used to add icons to plugins
+
   * The `fzf` ([Command line fuzzy search](https://github.com/junegunn/fzf)) is
     used for searching files and patterns. To install independently (not for Vim
     as the Vim plugin also does that for you for Vim), run

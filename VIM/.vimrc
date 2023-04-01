@@ -100,6 +100,7 @@ set expandtab
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/NERDTree'
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
@@ -114,9 +115,12 @@ Plug 'davidhalter/jedi-vim'
 " sudo apt install build-essential cmake vim-nox python3-dev
 " sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 " cd ~/.vim/plugged/YouCompleteMe
-Plug 'ycm-core/YouCompleteMe'
 " python3 install.py --all
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
+" **************************************************
+" END VIM PLUGINS
+" **************************************************
 
 " Use Gruvbox theme
 syntax on
@@ -126,13 +130,15 @@ set bg=dark
 
 " Set FZF Default Command and Options
 " This default FZF command requires `ag` tool to be installed
-let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -g ""'
+let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -f -g ""'
 " This default FZFG option requires `bat` tool to be installed
 let $FZF_DEFAULT_OPTS="--preview-window 'right:55%' --preview 'bat --style=numbers --line-range=:300 {}'
                         \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
                         \ctrl-b:preview-page-up,ctrl-f:preview-page-down,
                         \ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
                         \alt-up:half-page-up,alt-down:half-page-down"
+" For VimDevIcons
+set encoding=utf-8
 
 " Set Airline theme
 let g:airline_theme='gruvbox'
