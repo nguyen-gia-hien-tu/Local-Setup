@@ -111,6 +111,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
 " Code Completion Engine for Multiple Languages for VIM
 " The below 'Plug' is only for getting the latest update from the repo
+" Before installing with the below instructions, you need to install the plugin
+" first with `:PlugInstall` while in vim editor
 " To use it, this requires some manual installation, run the below commands on Ubuntu
 " sudo apt install build-essential cmake vim-nox python3-dev
 " sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm

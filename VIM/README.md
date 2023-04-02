@@ -65,7 +65,7 @@ This document goes through my local setup for VIM for a simple and quick editing
     _NOTE_: If the above step doesn't resolve the problem and you still cannot
     use `bat` as the command, make sure that you have `~/.local/bin` in your
     `PATH` by adding `~/.local/bin` (or `$HOME/.local/bin`)to your path through
-    adding the below command to your `~./bashrc` or `/.zshrc` file
+    adding the below command to your `~./bashrc` or `~/.zshrc` file
     ```zsh
     export PATH=$PATH:$HOME/.local/bin
     ```
@@ -99,6 +99,7 @@ This document goes through my local setup for VIM for a simple and quick editing
       ```zsh
       sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
       ```
+    * Install the plugins with `:PlugInstall` while in Vim editor for the plugin manager to clone the `YouCompleteMe` into its place first
     * Compile YCM
       * Go to the directory where `YouCompleteMe` folder is located with
         ```zsh
@@ -113,3 +114,5 @@ This document goes through my local setup for VIM for a simple and quick editing
 * For fonts used for Vim, I used [Meslo LG S Nerd
   Font Regular](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete).
   Since I'm using Windows (WSL), I install [Meslo LG S Regular Nerd Font Complete Windows Compatible.ttf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete/Meslo%20LG%20S%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf)
+
+* Finally, install all the plugins with `:PlugInstall` while in the Vim editor 
