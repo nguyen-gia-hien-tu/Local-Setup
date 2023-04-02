@@ -130,7 +130,7 @@ set bg=dark
 
 " Set FZF Default Command and Options
 " This default FZF command requires `ag` tool to be installed
-let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -f -g ""'
+let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -g ""'
 " This default FZFG option requires `bat` tool to be installed
 let $FZF_DEFAULT_OPTS="--preview-window 'right:55%' --preview 'bat --style=numbers --line-range=:300 {}'
                         \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
