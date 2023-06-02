@@ -85,6 +85,9 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+" Make Y behaves similar to C and D
+map Y y$
+
 " Set tab space to 2
 set tabstop=2
 " Set auto indent to 2 spaces
@@ -98,9 +101,15 @@ set expandtab
 " **************************************************
 " Vim Plugin will be downloaded under the speciendifed directory
 call plug#begin('~/.vim/plugged')
+" Theme for Vim
 Plug 'morhetz/gruvbox'
+" File Navigation Tool for vim
 Plug 'preservim/NERDTree'
+" Open Tabs in NERDTree Painlessly
+Plug 'jistr/vim-nerdtree-tabs'
+" Fancy Icons for Vim
 Plug 'ryanoasis/vim-devicons'
+" Fuzzy Search String
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
@@ -111,9 +120,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
 " Code Completion Engine for Multiple Languages for VIM
 " The below 'Plug' is only for getting the latest update from the repo
-" Before installing with the below instructions, you need to install the plugin
-" first with `:PlugInstall` while in vim editor
-" To use it, this requires some manual installation, run the below commands on Ubuntu
+" To use it, this requires some manual installation, run the 4 below commands on terminal for Ubuntu
 " sudo apt install build-essential cmake vim-nox python3-dev
 " sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 " cd ~/.vim/plugged/YouCompleteMe
@@ -127,25 +134,31 @@ call plug#end()
 " Use Gruvbox theme
 syntax on
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark='hard'
 set bg=dark
+
+" Show Hidden Files in NERDTree
+let NERDTreeShowHidden=1
+" Automatically open NERDTree on every tab
+let g:nerdtree_tabs_open_on_console_startup=1
 
 " Set FZF Default Command and Options
 " This default FZF command requires `ag` tool to be installed
-let $FZF_DEFAUL_COMMAND='ag --hidden --ignore .git -g ""'
-" This default FZFG option requires `bat` tool to be installed
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+" This default FZF option requires `bat` tool to be installed
 let $FZF_DEFAULT_OPTS="--preview-window 'right:55%' --preview 'bat --style=numbers --line-range=:300 {}'
                         \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
                         \ctrl-b:preview-page-up,ctrl-f:preview-page-down,
                         \ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
                         \alt-up:half-page-up,alt-down:half-page-down"
+
 " For VimDevIcons
 set encoding=utf-8
 
-" Set Airline theme
+" Set Airline Theme
 let g:airline_theme='gruvbox'
 
-" For airline Powerline Fonts
+" For Airline Powerline Fonts
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
